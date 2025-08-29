@@ -13,17 +13,18 @@
       background-color: #fdf6f6;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       min-height: 100vh;
       overflow-x: hidden;
       position: relative;
+      padding-top: 20px;
     }
 
     .carta {
       background: rgba(255, 255, 255, 0.95);
       border-radius: 15px;
       box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
-      padding: 30px;
+      padding: 20px 25px;
       max-width: 900px;
       width: 90%;
       margin: 20px;
@@ -37,12 +38,11 @@
     .foto {
       display: block;
       margin: 0 auto 20px;
-      max-width: 60%;
-      aspect-ratio: 1 / 1; 
-      object-fit: cover;   
-      border-radius: 12px; 
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-      border: 3px solid #ccc; /* cor neutra */
+      max-width: 90%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
       filter: brightness(1.05) contrast(1.05);
       transition: transform 0.3s ease, filter 0.3s ease;
     }
@@ -61,7 +61,7 @@
     .assinatura {
       text-align: right;
       font-style: italic;
-      color: #333; /* neutro */
+      color: #000;
       font-weight: bold;
       margin-top: 20px;
     }
@@ -69,13 +69,13 @@
     audio {
       display: block;
       width: 100%;
-      margin: 25px 0 0;
+      margin-bottom: 25px;
     }
 
     .heart {
       position: absolute;
       top: -50px;
-      color: #333; /* neutro */
+      color: #000;
       font-size: 20px;
       animation: fall linear forwards;
       opacity: 0.8;
@@ -88,13 +88,14 @@
     }
 
     @media (max-width: 1000px) {
-      .carta { padding: 25px; width: 95%; }
+      .carta { padding: 20px; width: 95%; }
       p { font-size: 1.05em; }
     }
 
     @media (max-width: 600px) {
-      .carta { padding: 20px; }
+      .carta { padding: 15px; }
       p { font-size: 0.95em; }
+      .foto { max-width: 95%; }
     }
 
     @media (min-width: 1200px) {
@@ -104,37 +105,35 @@
 </head>
 <body>
   <div class="carta">
+    <audio id="musica" controls autoplay loop>
+      <source src="Enchanted - Taylor.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio.
+    </audio>
+
     <img src="foto.jpg" alt="Nosso amor" class="foto">
+
     <p><strong>Meu amor,</strong></p>
+
     <p>Em toda a minha vida, você é a parte mais bonita. É quem me faz sentir amado simplesmente por estar ao meu lado, é quem desperta em mim sensações que eu passei a vida inteira acreditando que não existiam. Eu sempre tentei ser o melhor para você, mas quero me esforçar ainda mais a cada dia, porque você é a minha parte boa, é quem eu quero ter ao meu lado e perturbar por toda a eternidade, já que eu não sei e nem quero ser diferente.</p>
     <p>Eu sei que vivo repetindo isso praticamente o tempo todo, mas é porque o orgulho que sinto de você é imenso. Você é uma mulher incrível, forte e determinada, e eu admiro cada detalhe da pessoa que você se torna dia após dia. O Liam vai ter a melhor mãe do mundo, e eu tenho certeza absoluta de que ele vai sentir o mesmo orgulho indescritível que eu sinto por você.</p>
-    <p>É uma felicidade imensa saber que estamos construindo a família que sempre sonhamos. Lembro dos nossos planos lá em dezembro, quando nem imaginávamos que um dia nos tornaríamos um casal, e olha só para nós agora. É claro que não é sempre fácil, nada na vida é 100% fácil o tempo todo, mas talvez seja justamente isso que torne tudo tão especial, porque cada desafio só reforça o quanto vale a pena, o quanto somos fortes juntos e o quanto eu quero viver essa história com você.</p>
-    <p>É surreal a forma como nos conectamos, o jeitinho como a gente se entende, como a nossa conexão parece de outro mundo, até mesmo no silêncio. Você é tudo para mim, e poder compartilhar cada momento com você, sejam bons ou ruins, é gratificante. Mesmo não sendo flores o tempo todo, desde que eu esteja ao seu lado, já vai ter valido a pena.</p>
+    <p>Meu amor, é uma felicidade imensa saber que estamos construindo a família que sempre sonhamos. Lembro dos nossos planos lá em dezembro, quando nem imaginávamos que um dia nos tornaríamos um casal, e olha só para nós agora. É claro que não é sempre fácil, nada na vida é 100% fácil o tempo todo, mas talvez seja justamente isso que torne tudo tão especial, porque cada desafio só reforça o quanto vale a pena, o quanto somos fortes juntos e o quanto eu quero viver essa história com você.</p>
+    <p>É surreal a forma como nos conectamos, o jeitinho como a gente se entende, como a nossa conexão parece de outro mundo, até mesmo no silêncio. Você é tudo para mim e poder compartilhar cada momento com você, sejam bons ou ruins, é gratificante. Mesmo não sendo flores o tempo todo, desde que eu esteja ao seu lado, já vai ter valido a pena.</p>
     <p>Eu tenho muito medo de te perder novamente. Medo de que tudo acabe dando errado, e sempre que esse medo aperta eu volto para dezembro e penso no que te falei: se a gente deixar o medo tomar conta, nunca vamos viver tudo o que queremos. E, de verdade, eu quero viver tudo e mais um pouco ao seu lado.</p>
     <p>Eu realmente quero estar ao seu lado, e ao do Liam, em um momento como esse. Quero poder compartilhar cada instante da gravidez e cuidar de você, não como um ex-namorado, mas como o seu marido. Você não é só um sonho, você é a minha realidade, e eu quero que seja sempre assim, porque nós temos total capacidade para isso.</p>
     <p>Sabe, me parte o coração te ver mal, mas dói ainda mais não conseguir fazer você se sentir bem do jeito que eu desejo. Só posso estar ao seu lado e cuidar de você do jeito certo, ou apenas do jeito que sei fazer.</p>
     <p>Talvez este texto esteja ficando grande demais, mas a verdade é que eu não sei falar pouco quando se trata de você. Sempre tenho muito a dizer, muito a compartilhar e muito a demonstrar. Talvez eu seja exagerado quando o assunto é amar você, mas se não fosse exagerado, com certeza não seria eu.</p>
     <p>Se um dia tudo parecer difícil e até as coisas mínimas parecerem prestes a desmoronar, lembre-se de mim e do nosso pequeno Spider. Sempre estaremos aqui por você, sempre ao seu lado, e nunca vamos te deixar, nunca mesmo. Vamos ser a dupla dinâmica que vai te trazer conforto e, ao mesmo tempo, aquele estresse saudável que só a gente sabe dar.</p>
-    <p>Lembre-se de que, mesmo quando tudo parecer confuso, estaremos aqui para te apoiar e dar certezas até mesmo nas incertezas. Você nunca esteve e nunca estará sozinha. Nós te amamos muito e vamos te amar para sempre. Temos orgulho de você e sempre teremos.</p>
-    <p>Obrigado por ser a nossa luz, principalmente a minha. Obrigado por me mostrar que nem tudo está perdido. Agora chegou a minha vez de ser isso por você.</p>
-    <p class="assinatura"><strong>Eu te amo, para todo o sempre. ❤️</strong></p>
+    <p>Lembre-se de que, mesmo quando tudo parecer confuso, estaremos aqui para te apoiar e dar certezas até mesmo nas incertezas. Você nunca esteve e nunca estará sozinha. Nós te amamos muito e vamos te amar para sempre. Temos orgulho de você e sempre teremos. Obrigado por ser a nossa luz, principalmente a minha. Obrigado por me mostrar que nem tudo está perdido. Agora chegou a minha vez de fazer isso por você.</p>
 
-    <audio id="musica" controls autoplay loop>
-      <source src="Enchanted - Taylor.mp3" type="audio/mpeg">
-      Seu navegador não suporta áudio.
-    </audio>
+    <p class="assinatura"><strong>Eu te amo, para todo o sempre. 🤍</strong></p>
   </div>
 
   <script>
-    // Tentar autoplay ao carregar a página
     window.addEventListener('load', function() {
       const audio = document.getElementById('musica');
-      audio.play().catch(() => {
-        console.log("Autoplay bloqueado. Usuário precisa iniciar o áudio manualmente.");
-      });
+      audio.play().catch(() => { console.log("Autoplay bloqueado. Usuário precisa iniciar o áudio manualmente."); });
     });
 
-    // Animação dos corações
     function createHeart() {
       const heart = document.createElement("div");
       heart.classList.add("heart");
